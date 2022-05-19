@@ -33,7 +33,7 @@ export default function FormPerson({ setOpen, setAlert, person }) {
       nombre: formData.get('nombre'),
       apellido: formData.get('apellido'),
       direccion: formData.get('direccion'),
-      municipio_id: parseInt(formData.get('municipio')),
+      municipio: parseInt(formData.get('municipio')),
     };
     console.log(data);
     if (person) {
