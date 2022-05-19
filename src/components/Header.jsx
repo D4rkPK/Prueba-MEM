@@ -1,6 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon, HomeIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 
@@ -23,9 +22,9 @@ export default function Header() {
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Link href={"/"}>
+                    <Link href={'/'}>
                       <a className="text-gray-400 hover:text-white">
-                      <HomeIcon className="h-7 w-7" aria-hidden="true"/>
+                      <HomeIcon className="h-7 w-7" aria-hidden="true" />
                       </a>
                     </Link>
                   </div>
