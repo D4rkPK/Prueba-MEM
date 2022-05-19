@@ -153,6 +153,7 @@ export default function FormPerson({ setOpen, setAlert, person }) {
                 Municipio
               </label>
               <select
+                onClick={handleClick}
                 id="municipio"
                 name="municipio"
                 defaultValue={person?.municipio_id}

@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPWA = require ('next-pwa');
+const runtimeCaching = require("next-pwa/cache");
+
+const nextConfig = withPWA({
+  pwa: {
+    dest: 'public',
+    register: true,
+    mode: 'production',
+    disable: false,
+    runtimeCaching,
+    buildExcludes: [/middleware-manifest.json$/],
+  },
   reactStrictMode: true,
   images: {
     domains: ['ui-avatars.com'],
@@ -7,6 +18,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-}
+});
 
 module.exports = nextConfig
