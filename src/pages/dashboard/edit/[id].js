@@ -22,5 +22,4 @@ export default function Edit() {
   }, []);
 
   return <FormPerson person={person} />;
-};
-
+}

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useRouter } from 'next/router';
 import endPoints from '@services/api';
 import useFetch from '@hooks/useFetch';
@@ -12,18 +12,13 @@ export default function FormPerson({ setOpen, setAlert, person }) {
     event.preventDefault();
     var departamentoSelect = document.getElementById('departamento');
     var municipiosSelect = document.getElementById('municipio');
-
-    departamentoSelect?.addEventListener('click', cargarMunicipios);
-
-    function cargarMunicipios() {
-      municipiosSelect.options.length = 1;
-      getMunicipios(departamentos, parseInt(departamentoSelect.value))?.map((municipio) => {
-        let opcion = document.createElement('option');
-        opcion.value = municipio.id;
-        opcion.text = municipio.nombre;
-        municipiosSelect?.add(opcion);
-      });
-    }
+    municipiosSelect.options.length = 1;
+    getMunicipios(departamentos, parseInt(departamentoSelect.value))?.map((municipio) => {
+      let opcion = document.createElement('option');
+      opcion.value = municipio.id;
+      opcion.text = municipio.nombre;
+      municipiosSelect?.add(opcion);
+    });
   };
 
   const formRef = useRef(null);
