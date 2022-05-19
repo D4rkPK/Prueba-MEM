@@ -141,7 +141,7 @@ export default function FormPerson({ setOpen, setAlert, person }) {
                 autoComplete="departamento-name"
                 className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               >
-                <option value="0">Seleccione</option>
+                <option onClick={handleClick} value="0">Seleccione</option>
                 {departamentos.data?.map((departamento) => (
                   <option key={departamento.id} value={departamento.id}>{`${departamento.nombre}`}</option>
                 ))}
@@ -153,7 +153,6 @@ export default function FormPerson({ setOpen, setAlert, person }) {
                 Municipio
               </label>
               <select
-                onClick={handleClick}
                 id="municipio"
                 name="municipio"
                 defaultValue={person?.municipio_id}

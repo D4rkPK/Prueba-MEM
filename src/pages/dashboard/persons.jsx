@@ -112,7 +112,7 @@ export default function Persons() {
                         </div>
                         <div className="ml-4">
                           <div className="text-sm font-medium text-gray-900">
-                            {person.nombre} {person.apellido} {person.id}
+                            {person.nombre} {person.apellido}
                           </div>
                         </div>
                       </div>
